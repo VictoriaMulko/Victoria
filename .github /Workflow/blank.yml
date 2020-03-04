@@ -15,3 +15,11 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+public static void main(String[] args) throws Exception {
+    MLPMnistSingleLayerRunner mlpMnistRunner = new MLPMnistSingleLayerRunner();
+    JCommander.newBuilder()
+            .addObject(mlpMnistRunner)
+            .build()
+            .parse(args);
+    mlpMnistRunner.execute();
+}
